@@ -2,6 +2,7 @@ import { Box, Button, Chip, Container, Grid, Stack, Typography } from '@mui/mate
 import { motion } from 'framer-motion'
 import { NavLink } from 'react-router-dom'
 import heroImg from '../assets/hero.png'
+import krishnaMernPdf from '../assets/Krishna_mern.pdf'
 import { SkillMeter } from '../components/SkillMeter'
 import { SectionHeading } from '../components/SectionHeading'
 import { ProjectsContainer } from '../containers/ProjectsContainer'
@@ -9,7 +10,7 @@ import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 import { useGetSignalsQuery, useGetSkillsQuery } from '../services/portfolioApi'
 
 const heroTags = ['React.js 19.2', 'React Native', 'TypeScript', 'Node.js']
-const cvDownloadPath = '/Krish-CV.html'
+
 
 export default function HomePage() {
   const { data: signals = [] } = useGetSignalsQuery()
@@ -94,9 +95,7 @@ export default function HomePage() {
                 </Stack>
                 <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
                   <Button
-                    component="a"
-                    download="Krish-CV.html"
-                    href={cvDownloadPath}
+                    onClick={() => window.open(krishnaMernPdf, '_blank')}
                     size="large"
                     variant="contained"
                   >
