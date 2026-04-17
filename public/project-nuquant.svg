@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" role="img" aria-labelledby="title desc">
+  <title id="title">NuQuant project preview</title>
+  <desc id="desc">Investment dashboard preview with portfolio charts.</desc>
+  <rect width="960" height="300" fill="#06101f"/>
+  <rect x="0" y="0" width="960" height="300" fill="#0f1e34"/>
+  <path d="M0 226 C120 178 188 212 294 170 C420 119 508 171 616 108 C726 44 816 77 960 36 L960 300 L0 300 Z" fill="#123f65"/>
+  <path d="M0 246 C126 208 211 231 320 194 C455 148 539 184 657 133 C773 83 852 103 960 72" fill="none" stroke="#36d9ff" stroke-width="5"/>
+  <path d="M110 92h220v92H110zM374 68h160v116H374zM578 112h250v72H578z" fill="#0a1729" stroke="#2d7dff" stroke-width="3"/>
+  <path d="M140 154l34-34 31 20 44-52 50 66" fill="none" stroke="#ffb36f" stroke-width="6"/>
+  <circle cx="735" cy="149" r="30" fill="none" stroke="#36d9ff" stroke-width="8"/>
+  <circle cx="735" cy="149" r="16" fill="#36d9ff"/>
+  <text x="42" y="64" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700">NUQUANT</text>
+  <text x="42" y="112" fill="#9fc3df" font-family="Arial, Helvetica, sans-serif" font-size="20">Portfolio intelligence</text>
+</svg>

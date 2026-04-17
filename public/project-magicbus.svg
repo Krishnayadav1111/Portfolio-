@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" role="img" aria-labelledby="title desc">
+  <title id="title">MagicBus project preview</title>
+  <desc id="desc">Program analytics preview with bus illustration.</desc>
+  <rect width="960" height="300" fill="#f8fbff"/>
+  <path d="M0 76c124 10 171-35 298-23 144 14 225 62 362 32 122-27 207-8 300 31v184H0z" fill="#dfefff"/>
+  <path d="M150 132h548c46 0 83 37 83 83v25H116v-74c0-19 15-34 34-34z" fill="#f04438"/>
+  <path d="M193 154h455c30 0 55 24 55 55v7H150v-19c0-24 19-43 43-43z" fill="#ffcf33"/>
+  <rect x="200" y="165" width="90" height="54" rx="7" fill="#d7f7ff"/>
+  <rect x="314" y="165" width="90" height="54" rx="7" fill="#d7f7ff"/>
+  <rect x="428" y="165" width="90" height="54" rx="7" fill="#d7f7ff"/>
+  <rect x="542" y="165" width="90" height="54" rx="7" fill="#d7f7ff"/>
+  <circle cx="238" cy="244" r="33" fill="#0d1726"/>
+  <circle cx="634" cy="244" r="33" fill="#0d1726"/>
+  <circle cx="238" cy="244" r="14" fill="#35d2ff"/>
+  <circle cx="634" cy="244" r="14" fill="#35d2ff"/>
+  <text x="82" y="88" fill="#101820" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700">MagicBus</text>
+  <text x="82" y="116" fill="#526070" font-family="Arial, Helvetica, sans-serif" font-size="18">program performance</text>
+</svg>

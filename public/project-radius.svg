@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" role="img" aria-labelledby="title desc">
+  <title id="title">Radius project preview</title>
+  <desc id="desc">Event analytics preview with live attendance rings.</desc>
+  <rect width="960" height="300" fill="#07101c"/>
+  <circle cx="686" cy="148" r="104" fill="none" stroke="#1b4d89" stroke-width="26"/>
+  <circle cx="686" cy="148" r="104" fill="none" stroke="#35d2ff" stroke-width="26" stroke-dasharray="420 260" transform="rotate(-62 686 148)"/>
+  <circle cx="686" cy="148" r="58" fill="none" stroke="#ff8a3d" stroke-width="18" stroke-dasharray="205 160" transform="rotate(26 686 148)"/>
+  <rect x="84" y="74" width="392" height="152" rx="8" fill="#0b1728" stroke="#2d7dff" stroke-width="3"/>
+  <path d="M126 188h48v-54h-48zM204 188h48v-90h-48zM282 188h48v-42h-48zM360 188h48v-112h-48z" fill="#35d2ff"/>
+  <text x="84" y="48" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700">RADIUS</text>
+  <text x="596" y="158" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">LIVE</text>
+  <text x="596" y="184" fill="#a9c8df" font-family="Arial, Helvetica, sans-serif" font-size="18">events</text>
+</svg>
