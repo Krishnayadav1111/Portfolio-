@@ -78,7 +78,7 @@ const projects: Project[] = [
       title: 'IP Mudra',
       summary: 'Full-service website for an Intellectual Property law firm in India, covering trademarks, patents, copyrights, and IP litigation services.',
       impact: 'Delivered a professional, SEO-optimized web presence that strengthened client trust and online visibility for the firm.',
-      image: '/project-ipmudra.svg',
+      image: '/project-ipmudra.png',
       stack: ['React', 'Vite', 'TypeScript', 'Material UI', 'Responsive Design'],
       metrics: ['SEO Optimized', 'Legal Services', 'Responsive UI'],
       featured: true,
