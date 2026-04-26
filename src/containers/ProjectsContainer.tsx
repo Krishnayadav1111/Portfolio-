@@ -51,7 +51,13 @@ export function ProjectsContainer({
               transition={{ delay: index * 0.08, duration: 0.35 }}
             >
               <ProjectCard
-                onViewProject={() => setIsToastOpen(true)}
+                onViewProject={() => {
+                  if (project.link) {
+                    window.open(project.link, '_blank')
+                  } else {
+                    setIsToastOpen(true)
+                  }
+                }}
                 project={project}
               />
             </motion.div>

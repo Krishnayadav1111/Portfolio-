@@ -1,3 +1,4 @@
+import emailjs from '@emailjs/browser'
 import { createApi, fakeBaseQuery } from '@reduxjs/toolkit/query/react'
 
 export type Project = {
@@ -9,6 +10,7 @@ export type Project = {
   stack: string[]
   metrics: string[]
   featured: boolean
+  link?: string
 }
 
 export type Skill = {
@@ -71,6 +73,17 @@ const projects: Project[] = [
     metrics: ['10+ User Types', 'Credit API', 'User Management'],
     featured: true,
   },
+     {
+      id: 'ip-mudra',
+      title: 'IP Mudra',
+      summary: 'Full-service website for an Intellectual Property law firm in India, covering trademarks, patents, copyrights, and IP litigation services.',
+      impact: 'Delivered a professional, SEO-optimized web presence that strengthened client trust and online visibility for the firm.',
+      image: '/project-ipmudra.svg',
+      stack: ['React', 'Vite', 'TypeScript', 'Material UI', 'Responsive Design'],
+      metrics: ['SEO Optimized', 'Legal Services', 'Responsive UI'],
+      featured: true,
+      link: 'https://ipmudra.com',
+    },
   {
     id: 'invulb',
     title: 'Invulb',
@@ -101,6 +114,8 @@ const projects: Project[] = [
     metrics: ['Secure Auth', 'RBAC', 'Portfolio Management'],
     featured: true,
   },
+
+ 
 ]
 
 const skills: Skill[] = [
@@ -159,9 +174,40 @@ export const portfolioApi = createApi({
       },
     }),
     sendContact: builder.mutation<{ ok: true }, ContactRequest>({
-      queryFn: async () => {
-        await wait(420)
-        return { data: { ok: true } }
+      queryFn: async (values) => {
+        try {
+          const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
+          const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+          const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+
+          // If keys are not configured, simulate success for development
+          if (
+            !serviceId ||
+            !templateId ||
+            !publicKey ||
+            serviceId === 'your_service_id'
+          ) {
+            console.warn('EmailJS is not fully configured. Simulating success...')
+            await wait(800)
+            return { data: { ok: true } }
+          }
+
+          await emailjs.send(
+            serviceId,
+            templateId,
+            {
+              from_name: values.name,
+              from_email: values.email,
+              message: values.message,
+            },
+            publicKey
+          )
+
+          return { data: { ok: true } }
+        } catch (error) {
+          console.error('EmailJS Error:', error)
+          return { error: { reason: 'Failed to send email. Please check console.' } }
+        }
       },
       invalidatesTags: ['Contact'],
     }),

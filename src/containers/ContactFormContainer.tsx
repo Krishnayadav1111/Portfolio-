@@ -19,16 +19,20 @@ export function ContactFormContainer() {
   /* WHY: React Hook Form keeps field updates out of React render state until
      validation or submission matters, which scales better for larger forms. */
   const onSubmit = handleSubmit(async (values) => {
-    await sendContact(values).unwrap()
-    setIsSent(true)
-    reset()
+    try {
+      await sendContact(values).unwrap()
+      setIsSent(true)
+      reset()
+    } catch (error) {
+      console.error('Submission error:', error)
+    }
   })
 
   return (
     <Stack component="form" spacing={2.5} onSubmit={onSubmit} noValidate sx={{ width: '100%' }}>
       {isSent ? (
-        <Alert severity="success">
-          Message simulated successfully. The RTK mutation completed.
+        <Alert severity="success" onClose={() => setIsSent(false)}>
+          Message sent successfully! I will get back to you soon.
         </Alert>
       ) : null}
       <TextField

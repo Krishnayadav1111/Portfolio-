@@ -40,7 +40,7 @@ const experiences = [
   {
     company: 'Shivani Locks Pvt. Ltd.',
     location: 'Palwal',
-    role: 'GET',
+    role: 'Engineer(Assembly)',
     period: 'Jun 2020 - Sep 2021',
     points: [
       'Worked on production operations, quality assurance, Poka-Yoke implementation, and 4M change documentation to improve process reliability.'
