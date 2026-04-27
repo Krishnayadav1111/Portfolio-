@@ -35,7 +35,7 @@ export function ProjectCard({ onViewProject, project }: ProjectCardProps) {
           aspectRatio: { xs: '16 / 7', sm: '16 / 6', lg: '16 / 5' },
           bgcolor: '#050a13',
           borderBottom: '1px solid rgba(255,255,255,0.08)',
-          objectFit: 'cover',
+          objectFit: 'contain',
           width: '100%',
         }}
       />
