@@ -1,5 +1,5 @@
 import { Button, Container, Stack, Typography } from '@mui/material'
-import { Component, ErrorInfo, ReactNode } from 'react'
+import { Component, type ErrorInfo, type ReactNode } from 'react'
 
 interface Props {
   children?: ReactNode
@@ -28,7 +28,7 @@ export class ErrorBoundary extends Component<Props, State> {
     if (this.state.hasError) {
       return (
         <Container maxWidth="md" sx={{ py: { xs: 8, md: 12 }, height: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-          <Stack spacing={3} alignItems="flex-start">
+          <Stack spacing={3} sx={{ alignItems: 'flex-start' }}>
             <Typography component="h1" variant="h2" sx={{ fontSize: { xs: 36, md: 52 }, fontWeight: 800, color: 'text.primary' }}>
               Oops, something went wrong.
             </Typography>
